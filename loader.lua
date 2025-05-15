@@ -8,6 +8,18 @@ local function notify(msg)
     })
 end
 
+local function assertGlobal(name)
+    if _G[name] == nil then
+        local msg = "Missing global: _G." .. name
+        notify(msg)
+        error(msg)
+    end
+end
+
+assertGlobal("AUTH_SERVER_ID")
+assertGlobal("AUTH_SCRIPT_ID")
+assertGlobal("key")
+
 local httpRequest =
     (syn and syn.request) or
     (SENTINEL_V2 and function(opt)
@@ -33,14 +45,14 @@ local ok, err = pcall(function()
     })
 
     if not success then
-        error("[9auth] Failed to download loader")
         notify("Failed to download loader")
+        error("[9auth] Failed to download loader")
     end
 
     assert(loadstring(res.Body))()
 end)
 
 if not ok then
-    warn("[9auth] Failed to run loader")
     notify("Failed to run loader")
+    warn("[9auth] Failed to run loader")
 end
