@@ -1,17 +1,10 @@
 local StarterGui = game:GetService("StarterGui")
-
-local function notify(msg)
-    StarterGui:SetCore("SendNotification", {
-        Title = "9AUTH",
-        Text = msg,
-        Duration = 5
-    })
-end
+local notify_service = loadstring(game:HttpGet("https://raw.githubusercontent.com/n9vo/rblx-notify-lib/refs/heads/main/main.lua"))()
 
 local function assertGlobal(name)
     if _G[name] == nil then
         local msg = "Missing global: _G." .. name
-        notify(msg)
+        notify_service:Notify("Error", msg, 5)
         error(msg)
     end
 end
@@ -45,7 +38,7 @@ local ok, err = pcall(function()
     })
 
     if not success then
-        notify("Failed to download loader")
+        notify_service:Notify("Error", "Failed to download loader", 5)
         error("[9auth] Failed to download loader")
     end
 
@@ -53,6 +46,6 @@ local ok, err = pcall(function()
 end)
 
 if not ok then
-    notify("Failed to run loader")
+    notify_service:Notify("Error", "Failed to run loader", 5)
     warn("[9auth] Failed to run loader")
 end
