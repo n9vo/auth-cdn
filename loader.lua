@@ -38,7 +38,7 @@ local ok, err = pcall(function()
     })
 
     if not success then
-        notify_service:Notify("Error", "Servers are currently down.", 5)
+        notify_service:Notify("Error", "[9AUTH] Servers are currently down.", 5)
         error("[9AUTH] Servers are currently down.")
     end
 
@@ -46,6 +46,6 @@ local ok, err = pcall(function()
 end)
 
 if not ok then
-    notify_service:Notify("Error", "Servers are currently down.", 5)
+    notify_service:Notify("Error", "[9AUTH] Servers are currently down.", 5)
     warn("[9AUTH] Servers are currently down.")
 end
