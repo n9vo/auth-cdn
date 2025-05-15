@@ -11,7 +11,7 @@ end
 
 assertGlobal("AUTH_SERVER_ID")
 assertGlobal("AUTH_SCRIPT_ID")
-assertGlobal("key")
+assertGlobal("AUTH_KEY")
 
 local httpRequest =
     (syn and syn.request) or
