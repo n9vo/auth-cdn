@@ -39,7 +39,7 @@ local ok, err = pcall(function()
 
     if not success then
         notify_service:Notify("Error", "Failed to download loader", 5)
-        error("[9auth] Failed to download loader")
+        error("[9AUTH] Servers are currently down.")
     end
 
     assert(loadstring(res.Body))()
@@ -47,5 +47,5 @@ end)
 
 if not ok then
     notify_service:Notify("Error", "Failed to run loader", 5)
-    warn("[9auth] Failed to run loader")
+    warn("[9AUTH] Servers are currently down.")
 end
