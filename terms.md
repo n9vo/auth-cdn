@@ -1,6 +1,6 @@
 # 9auth Terms of Service
-**Effective Date:** [Insert Date]  
-**Last Updated:** [Insert Date]
+**Effective Date:** May 16, 2025
+**Last Updated:** May 16, 2025
 
 ## 1. Introduction
 Welcome to **9auth**, a script protection, authentication, and monetization platform designed for Roblox script developers. These Terms of Service ("Terms") govern your access to and use of 9auth's services, including its website, Discord bot, dashboard, and any related software or tools ("Service"). By using 9auth, you agree to these Terms.
