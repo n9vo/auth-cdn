@@ -1,6 +1,5 @@
 # 9auth Privacy Policy
-**Effective Date:** [Insert Date]  
-**Last Updated:** [Insert Date]
+**Effective Date:** May 16, 2025
 
 At **9auth**, we respect your privacy and are committed to protecting the information you share with us. This Privacy Policy explains what data we collect, how we use it, and what choices you have regarding your information.
 
